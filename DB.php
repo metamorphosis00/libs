@@ -27,7 +27,6 @@ class DB
     public function query($sql, array $params = [])
     {
         $result = [];
-        echo $sql.PHP_EOL;
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($params);
