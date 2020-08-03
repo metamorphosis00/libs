@@ -4,7 +4,7 @@ class DB
 {
     const DB_HOST = '127.0.0.1';
     const DB_PORT = '3306';
-    const DB_NAME = 'work';
+    const DB_NAME = 'database';
     const DB_USER = 'root';
     const DB_PASS = '';
 
@@ -107,9 +107,3 @@ class DB
         return count($this->query($sql, array_values($values)));
     }
 }
-
-$db = new DB();
-//echo $db->count('users', ['login', 'full_name'], ['islam', 'islam']);
-//echo PHP_EOL;
-//echo $db->count('users', ['login', 'full_name'], ['ff', 'islam']);
-$db->update('users', ['login'], ['islam'], 1);
